@@ -1,7 +1,15 @@
-*{
-    box-sizing:border-box;
+@import 'fonts';
+
+* {
+    box-sizing: border-box;
 }
-body{
+
+body {
     font-size: 16px;
     background: rgb(59, 188, 228);
 }
+
+h1{
+    @include roboto;
+    font-weight: 100;
+} 
