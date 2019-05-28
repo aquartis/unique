@@ -24,6 +24,21 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Bold.eot');
+    src: url('SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SourceSansPro-Bold.woff2') format('woff2'),
+        url('SourceSansPro-Bold.woff') format('woff'),
+        url('SourceSansPro-Bold.ttf') format('truetype'),
+        url('SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@mixin sorce{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 @mixin roboto{
     font-family: 'Roboto', sans-serif;
 }

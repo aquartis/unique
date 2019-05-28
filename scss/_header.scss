@@ -1,0 +1,105 @@
+// header and first-block styles
+
+header,
+.first-block {
+    background: $yellow;
+    padding-bottom: 55px;
+}
+
+.nav-section {
+    //width: 100%;
+    @include flexRow;
+    align-items: center;
+    justify-content: space-between;
+    @include roboto;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $darkgrey;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.logo {
+    width: 30%;
+    font-size: 2em;
+    text-align: start;
+}
+
+.logo-span {
+    color: $white;
+    border: 3px solid #fff200;
+    padding: 2px 8px;
+}
+
+.navbar {
+    width: 70%;
+
+    & ul {
+        @include flexRow;
+        width: 100%;
+        align-items: center;
+        list-style: none;
+
+        & li {
+            width: calc(100%/7);
+
+            a {
+                color: $darkgrey;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.first-block-main {
+    @include flexRow;
+    justify-content: space-between;
+    @include roboto;
+    color: $white;
+}
+
+.first-block-section {
+    width: 40%;
+
+    article {
+        width: 80%;
+        font-size: 1.1rem;
+        line-height: 2;
+        max-height: 2rem *12;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 1.5rem;
+    }
+
+    button {
+        background: $darkgrey;
+        font-size: 1.1rem;
+        color: $white;
+        padding: 15px;
+        border: none;
+        border-radius: 3px;
+        @include flexRow;
+        align-items: center;
+
+        span {
+            padding: 0 0.3rem;
+        }
+    }
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.slider-container {
+    width: 60%;
+    margin-top: 60px;
+}
+
+.slide {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
