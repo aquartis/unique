@@ -1,7 +1,7 @@
 // second-block and third-block css styles
 h2 {
     @include sorce;
-    width: 20%;
+    width: 40%;
     color: $white;
     font-size: 2em;
     background: $darkgrey;
@@ -14,7 +14,6 @@ h2 {
 
 .second-block-odd,
 .second-block-even {
-    @include flexRow;
     justify-content: space-between;
     margin-bottom:200px;
 }
@@ -32,13 +31,11 @@ h2 {
     width: 45%;
 
     article {
-       // width: 70%;
-        @include roboto;
         line-height: 2;
         max-height: 7*2rem;
         overflow: hidden;
     }
-    button{
+ /*    button{
         @include open;
         margin-top:1rem;
         font-weight: bold;
@@ -48,18 +45,16 @@ h2 {
         border-radius: 3px;
         text-transform: uppercase;
         padding:15px 30px;
-    }
+    } */
 }
 
 h3 {
-    @include roboto;
     font-size: 1.2em;
     color: #252525;
     text-transform: uppercase;
     margin-bottom:1rem; 
 }
 .third-img-block{
- // width: 100%;
   img{
       width: 100%;
       height: auto;

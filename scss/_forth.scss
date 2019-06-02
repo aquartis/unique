@@ -1,7 +1,6 @@
 // forth-block and fifth-block css styles
 
 .forth-block-container {
-    @include flexRow;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
@@ -9,13 +8,11 @@
 
 .forth-block-box {
     width: calc(100%/3);
-    @include flexRow;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 3rem;
 
     article {
-        @include roboto;
         font-weight: 300;
         line-height: 2;
         color: #636363;
@@ -27,17 +24,15 @@
 }
 
 h4 {
-    @include roboto;
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #363636;
 }
 
 .fifth-block-prices {
-    @include flexRow;
-    @include roboto;
     font-weight: 500;
     margin-bottom: 200px;
+    flex-wrap: wrap;
 }
 
 .prices-box:first-child .options .th-text,
@@ -61,6 +56,7 @@ h4 {
 
 .prices-box:first-child .options .price {
     font-size: 2.2rem;
+
     span {
         font-size: 1.4rem;
     }
@@ -68,6 +64,7 @@ h4 {
 
 .prices-box:nth-child(2) {
     color: #f26c4f;
+
     .options {
         .th-text {
             font-size: 2rem;
@@ -76,8 +73,8 @@ h4 {
         .option {
             color: #363636;
             font-size: 1.2rem;
-            border-left:1px solid #ffbf37;
-            border-right:1px solid #ffbf37;
+            border-left: 1px solid #ffbf37;
+            border-right: 1px solid #ffbf37;
         }
 
         .price {
@@ -85,8 +82,9 @@ h4 {
             font-size: 4rem;
             display: flex;
             justify-content: center;
-            border-left:1px solid #ffbf37;
-            border-right:1px solid #ffbf37;
+            border-left: 1px solid #ffbf37;
+            border-right: 1px solid #ffbf37;
+
             span {
                 font-size: 1.4rem;
             }
@@ -138,7 +136,6 @@ h4 {
 }
 
 .options {
-    @include flexColumn;
     justify-content: center;
     align-items: center;
 
@@ -166,4 +163,75 @@ h4 {
 
 .prices-box {
     width: calc(100%/3);
+}
+
+.order-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    //height: 45vh;
+    background: $yellow;
+    transform: translate(-50%, -50%);
+    border: 2px solid $darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    padding:4rem 0;
+    label {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        font-size: 1.1rem;
+        margin: 1rem 0;
+        input[type='text'],
+        input[type='e-mail']{
+            width: 60%;
+            height: 1.8rem;
+            border:none;
+        }
+        input[type="submit"]{
+            margin:2rem auto 0;
+            width:30%;
+            border:3px solid $darkgrey;
+            color:$white;
+            background: transparent;
+            padding:0.5rem 2rem;
+            text-transform: uppercase;
+            &:hover{
+                border:3px solid $white;  
+            }
+        }
+    }
+}
+.close-btn{
+    position: absolute;
+    top:5%;
+    right: 5%;
+    width:30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    span{
+        position :absolute;
+        width: 100%;
+        height: 4px;
+        background: $white;
+        border-radius: 2px;
+        transform:rotate(45deg);
+    }
+    span:nth-child(2){
+        transform:rotate(-45deg);
+    }
+    &:hover{
+        transform: scale(1.2)
+    }
+}
+.disactive{
+    display: none;
 }

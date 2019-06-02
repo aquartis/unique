@@ -1,0 +1,396 @@
+// @media style css
+
+@media (max-width:768px) {
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .first-block-main {
+        flex-direction: column;
+
+        .first-block-section {
+            width: 100%;
+
+            article {
+                width: 100%;
+            }
+        }
+
+        .slider-container {
+            width: 100%;
+        }
+
+    }
+
+    .nav-section {
+        display: none;
+    }
+
+    .logo {
+        width: 70%;
+        display: flex;
+
+        p {
+            color: $darkgrey;
+        }
+    }
+
+    .nav-section-adaptive {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .navbar {
+            display: none;
+            overflow: hidden;
+
+            ul {
+                transform: translateY(-100%);
+            }
+        }
+
+    }
+
+    .menu {
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        position: relative;
+
+        span {
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            background: $darkgrey;
+            border-radius: 2px;
+        }
+
+        span:nth-child(1) {
+            top: 6px;
+        }
+
+        span:nth-child(2) {
+            top: 16px;
+        }
+
+        span:last-child {
+            bottom: 0;
+        }
+    }
+
+    .menu.active {
+        span:first-child {
+            top: 50%;
+            transform: rotate(225deg);
+            transition: transform 1s;
+        }
+
+        span:nth-child(2) {
+            display: none;
+            top: 16px;
+        }
+
+        span:last-child {
+            top: 50%;
+            transform: rotate(135deg);
+            transition: transform 1s;
+        }
+    }
+
+    .navbar.active {
+        width: 100%;
+        display: block;
+        transform: scale(1);
+        transition: all 1s;
+
+        ul {
+            align-items: center;
+            padding: 1rem;
+            transform: translateY(0);
+            animation: menu 1.5s linear;
+
+            li {
+                text-align: center;
+                width: 100%;
+                padding: 0.5rem;
+                font-size: 1.3rem;
+                border-bottom: 1px solid $darkgrey;
+            }
+        }
+    }
+
+    @keyframes menu {
+        0% {
+            transform: translateY(-100%);
+            height: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            height: 100%;
+        }
+    }
+
+    h2 {
+        margin: 50px auto;
+    }
+
+    .second-block-odd,
+    .second-block-even {
+        margin-bottom: 100px;
+    }
+
+    .fifth-block-prices {
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .prices-box {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .prices-box:nth-child(2) {
+        .options {
+
+            .option,
+            .price {
+                border-right: none;
+            }
+
+        }
+
+    }
+
+    .sixth-block-container {
+        section {
+            h2 {
+                width: 100%;
+            }
+        }
+    }
+
+    .sixth-img-box {
+        width: 50%;
+        margin-top: 20%;
+    }
+
+    .projects {
+        flex-wrap: wrap;
+    }
+
+    .project {
+        width: calc(100%/3);
+    }
+
+    .nineth-block-box {
+        margin-bottom: 100px;
+    }
+
+    .nineth-block-section {
+        article {
+            font-size: 0.9rem;
+        }
+    }
+
+    .nineth-block-img {
+        align-self: center;
+    }
+
+    .last-block-img {
+        background-size: cover;
+        height: 50vh;
+    }
+
+    .last-block-text {
+        padding: 1rem;
+
+        h5,
+        .last-block-button {
+            font-size: 1rem;
+        }
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    .footer-sertion {
+        h6 {
+            font-size: 1rem;
+        }
+    }
+
+    .footer-sertion-list {
+        li {
+            a {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .order-form {
+        width:90%;
+    }
+}
+
+@media(max-width:375px) {
+    .first-block {
+        width: 100%;
+        padding-top:100px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    header {
+  padding: 1.4rem 0;
+    }
+
+    .logo {
+        width: 70%;
+    }
+
+    .menu {
+        width: 30%;
+    }
+
+    h2 {
+        width: 90%;
+    }
+    .pagination{
+        width:40%;
+    }
+    .second-block-odd,
+    .second-block-even {
+        justify-content: center;
+
+
+    }
+
+    .second-block-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        article {
+            width: 80%;
+        }
+    }
+
+    .img-box {
+        display: none;
+    }
+
+    .forth-block-box {
+        width: 100%;
+    }
+
+    .prices-box {
+        width: 100%;
+    }
+
+    .prices-box:nth-child(2) {
+        .options {
+
+            .option,
+            .price {
+                border-left: none;
+            }
+
+        }
+
+    }
+
+    .sixth-img-box {
+        display: none;
+    }
+
+    .sixth-block-container section {
+        width: 100%;
+
+        button {
+            margin: 1rem auto;
+        }
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .team-section {
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .eightth-block-members {
+        flex-wrap: wrap;
+    }
+
+    .member {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nineth-block-section {
+        width: 100%;
+    }
+
+    .nineth-block-img {
+        display: none;
+    }
+
+    .button-first {
+        margin: 1rem auto;
+    }
+
+    .last-block-text {
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .last-block-text .last-block-button {
+        font-size: 0.5rem;
+        padding: 1rem 0.5rem;
+    }
+    .footer-sertion h6{
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    footer .container{
+        display: flex;
+      
+    }
+    .footer-sertions{
+       flex-wrap: wrap;
+    }
+    .footer-sertion{
+         width: 50%;
+         margin-bottom: 0.5rem;
+    }
+    .footer-end{
+        font-size: 0.8rem;
+    }
+    .order-form {
+        height: 100vh;
+        label{
+            width: 90%;
+            flex-direction: column;
+            align-items: flex-start;
+            input[type='text'],
+            input[type='e-mail']{
+                width:90%;
+            }
+            input[type='submit']{
+                width: 50%;
+            }
+        }
+    }
+}

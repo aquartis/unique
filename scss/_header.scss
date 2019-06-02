@@ -1,22 +1,31 @@
 // header and first-block styles
 
-header,
+header {
+    position: fixed;
+    width: 100%;
+    background: $yellow;
+    padding: 2rem 0;
+    z-index: 2;
+}
+
 .first-block {
     background: $yellow;
-    padding-bottom: 55px;
+    padding-top: 200px;
+    padding-bottom: 100px;
 }
 
 .nav-section {
-    //width: 100%;
-    @include flexRow;
     align-items: center;
     justify-content: space-between;
-    @include roboto;
     text-transform: uppercase;
     font-weight: bold;
     color: $darkgrey;
     text-align: center;
-    margin-top: 75px;
+
+}
+
+.nav-section-adaptive {
+    display: none;
 }
 
 .logo {
@@ -35,7 +44,6 @@ header,
     width: 70%;
 
     & ul {
-        @include flexRow;
         width: 100%;
         align-items: center;
         list-style: none;
@@ -44,17 +52,40 @@ header,
             width: calc(100%/7);
 
             a {
+                position: relative;
                 color: $darkgrey;
                 text-decoration: none;
+
+                &:hover {
+                    color: #fff;
+                    transition: all 1s;
+                }
             }
         }
     }
 }
 
+.last {
+    position: relative;
+}
+
+.last:after {
+    content: '(+966-322-322)';
+    position: absolute;
+    width: 120%;
+    top: 20px;
+    left: -5px;
+
+}
+
+/* .last{
+    position:absolute;
+    top:7px;
+} */
+
+
 .first-block-main {
-    @include flexRow;
     justify-content: space-between;
-    @include roboto;
     color: $white;
 }
 
@@ -78,7 +109,6 @@ header,
         padding: 15px;
         border: none;
         border-radius: 3px;
-        @include flexRow;
         align-items: center;
 
         span {
@@ -91,15 +121,127 @@ h1 {
     font-size: 3em;
 }
 
+// Slider css settings
+
 .slider-container {
-    width: 60%;
+    width: 50%;
     margin-top: 60px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.slide {
-    width: 100%;
+.slide-wraper {
+    position: relative;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    transition: left 1s linear;
+}
 
-    img {
+
+.slide {
+    float: left;
+    // width:100%;
+    height: auto;
+    padding: 0 35px;
+}
+
+.disable {
+    display: none;
+}
+
+.pagination {
+    display: flex;
+    width: 10%;
+    margin: 1rem auto;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.pagination-elem {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 100%;
+}
+
+.pagination-elem.active {
+    background: $darkgrey;
+    /*  width:12px;
+    height: 12px; */
+    transform: scale(1.2);
+
+}
+
+// button scroll-up styles
+
+.scroll-up {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    background: $yellow;
+    border-radius: 100%;
+    border: 3px solid $darkgrey;
+    display: flex;
+    cursor: pointer;
+
+    .scroll-up-animate {
         width: 100%;
+        position: relative;
+        animation: scroll 1s linear infinite;
+
+        span {
+            position: absolute;
+            left: 17%;
+            width: 40%;
+            height: 4px;
+            background: $darkgrey;
+            transform: rotate(-45deg);
+        }
+
+        span:first-child {
+            top: 28px;
+        }
+
+        span:nth-child(2) {
+            top: 20px;
+        }
+
+        span:nth-child(3) {
+            top: 12px;
+        }
+
+        span:after {
+            content: '';
+            position: absolute;
+            right: -47%;
+            top: 8px;
+            width: 100%;
+            height: 4px;
+            background: $darkgrey;
+            transform: rotate(90deg)
+        }
+    }
+
+}
+
+.scroll-up.disactive {
+    display: none;
+}
+
+@keyframes scroll {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -4px;
+    }
+
+    100% {
+        top: 0;
     }
 }

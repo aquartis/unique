@@ -11,25 +11,54 @@
 
 <body>
     <header>
-        <div class="container nav-section">
+        <div class="container nav-section flex-row">
             <div class="logo">
                 <p><span class="logo-span">UNIQUE</span> TECH</p>
             </div>
             <div class="navbar">
-                <ul>
+                <ul class="flex-row">
                     <li><a href="#">home</a></li>
                     <li><a href="#">services</a></li>
                     <li><a href="#">about</a></li>
                     <li><a href="#">portfolio</a></li>
                     <li><a href="#">academic</a></li>
                     <li><a href="#">blog</a></li>
-                    <li><a href="#">contact us (+966-322-322)</a></li>
+                    <li><a class="last" href="#">contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container nav-section-adaptive flex-row">
+            <div class="logo">
+                <p><span class="logo-span">UNIQUE</span> TECH</p>
+            </div>
+            <div class="menu flex-column">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar">
+                <ul class="flex-column">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">academic</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">contact us</a></li>
                 </ul>
             </div>
         </div>
     </header>
+    <div class="scroll-up disactive">
+        <div class="scroll-up-animate">
+             <span></span>
+        <span></span>
+        <span></span>
+        </div>
+       
+    </div>
     <div class="first-block">
-        <div class="container first-block-main">
+        <div class="container first-block-main flex-row">
             <section class="first-block-section">
                 <h1>UNIQUE-TECH
                     APP DEVELOPMENT </h1>
@@ -49,23 +78,29 @@
                     consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
                     magnam
                     aliquam quaerat voluptatem.</article>
-                <button><span>View More</span><span><svg xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="19" viewBox="0 0 27 19">
-                            <image id="first.svg" width="27" height="19"
+                <button class="flex-row"><span>View More</span><span><svg  xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"  width="27" height="19" viewBox="0 0 27 19">
+                            <image  id="first.svg" width="27" height="19"
                                 xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAATCAQAAADLjr6zAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBRoREiti7LvTAAABk0lEQVQ4y42TPWhTYRSGn5smxiTiT3XQii7aQRwEpS1Bq9kcpEOtk7i4Obk5dXHVLuIsFhHEpYPgrCBCC4IGcfIni9TaBCtt8ba59fI4JCW3IT++ZzqH8/DBe94vkIRm+MwLqvSXrbqhRr5xymPSu5LNLRtadcFSbzTZXLGlqq8cdfB/sKKxSdV85nlT/bAj/nanYted8ZIYdMeOtr3W0Kah0xZ3ogN3ty09wxcC8gTUySesTpOhyDUG2GBpexg073aRaS4DcIqAMS6wm3EOEFBobm7xlVnmqLSwDGuUGafAcTZYo0qWiCzD7GWCE+yiRJ6YLAvM8YRaAwvJUWGY+9wmYpEV4A8/+EaNNOvMM0qJ95zjKmmeU0Z8qOqWe7zXwZJYDV227qKvXXLV0O9pAk4Sk6JOgeUO6UsBOXLAEENs8o5HvEwj1xlhkkMM8gkJusY35CmPKRO1opwRcazj5VTfOtHt3HjaqG39rx+94/5e4cJ9/kxYUfGBI/2jjAf91YQ+eNPD7UnshuGk8856tt83/QfqCOrwjkSvwwAAAABJRU5ErkJggg==" />
                         </svg></span></button>
             </section>
             <div class="slider-container">
-                <div class="slide">
-                    <img src="img/first.png" alt="notebook">
+                <div class="slide-wraper">
+                    <img class="slide" src="img/first.png" alt="notebook">
+                    <img class="slide" src="img/first.png" alt="notebook">
+                    <img class="slide" src="img/first.png" alt="notebook">
+                    <img class="slide" src="img/first.png" alt="notebook">
+                    <img class="slide" src="img/first.png" alt="notebook">
+
                 </div>
+                <div class="pagination"></div>
             </div>
         </div>
     </div>
     <div class="second-block">
         <div class="container">
             <h2>what we do</h2>
-            <div class="second-block-odd">
+            <div class="second-block-odd flex-row">
                 <div class="img-box"><img src="img/second.png" alt="second"></div>
                 <section class="second-block-section">
                     <h3>web design</h3>
@@ -84,10 +119,10 @@
                         amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
                         dolore magnam aliquam quaerat voluptatem.
                     </article>
-                    <button>view more</button>
+                    <button class="button-first">view more</button>
                 </section>
             </div>
-            <div class="second-block-even">
+            <div class="second-block-even flex-row">
                 <section class="second-block-section">
                     <h3>SEARCH ENGINE OPTIMIZATION</h3>
                     <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -108,11 +143,11 @@
                         voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
                         consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
                         magnam aliquam quaerat voluptatem.</article>
-                    <button>vew more</button>
+                    <button class="button-first">vew more</button>
                 </section>
                 <div class="img-box"><img src="img/second.png" alt="second"></div>
             </div>
-            <div class="second-block-odd">
+            <div class="second-block-odd flex-row">
                 <div class="img-box"><img src="img/second.png" alt="second"></div>
                 <section class="second-block-section">
                     <h3>AFFILIATE MARKETTING</h3>
@@ -136,7 +171,7 @@
                         consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
                         magnam aliquam quaerat voluptatem.
                     </article>
-                    <button>view more</button>
+                    <button class="button-first">view more</button>
                 </section>
             </div>
         </div>
@@ -154,8 +189,8 @@
     <div class="forth-block">
         <div class="container">
             <h2>our features</h2>
-            <div class="forth-block-container">
-                <div class="forth-block-box">
+            <div class="forth-block-container flex-row">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23"
                             height="29" viewBox="0 0 23 29">
@@ -170,7 +205,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27"
                             height="23" viewBox="0 0 27 23">
@@ -185,7 +220,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35"
                             height="23" viewBox="0 0 35 23">
@@ -200,7 +235,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27"
                             height="27" viewBox="0 0 27 27">
@@ -215,7 +250,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29"
                             height="27" viewBox="0 0 29 27">
@@ -230,7 +265,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27"
                             height="31" viewBox="0 0 27 31">
@@ -245,7 +280,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31"
                             height="31" viewBox="0 0 31 31">
@@ -260,7 +295,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29"
                             height="29" viewBox="0 0 29 29">
@@ -275,7 +310,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25"
                             height="31" viewBox="0 0 25 31">
@@ -290,7 +325,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
                             height="25" viewBox="0 0 20 25">
@@ -305,7 +340,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26"
                             height="24" viewBox="0 0 26 24">
@@ -320,7 +355,7 @@
                             Theme.</article>
                     </section>
                 </div>
-                <div class="forth-block-box">
+                <div class="forth-block-box flex-row">
                     <div class="svg-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17"
                             height="31" viewBox="0 0 17 31">
@@ -342,9 +377,9 @@
     <div class="fifth-block">
         <div class="container">
             <h2>our packages</h2>
-            <div class="fifth-block-prices">
+            <div class="fifth-block-prices flex-row">
                 <div class="prices-box">
-                    <div class="options">
+                    <div class="options flex-column">
                         <p class="th-text">Bacis</p>
                         <p class="option">5 web sites</p>
                         <p class="option">15 e-mails</p>
@@ -355,7 +390,7 @@
                     </div>
                 </div>
                 <div class="prices-box">
-                    <div class="options">
+                    <div class="options flex-column">
                         <p class="th-text">Standart</p>
                         <p class="option">15 web sites</p>
                         <p class="option">40 e-mails</p>
@@ -366,7 +401,7 @@
                     </div>
                 </div>
                 <div class="prices-box">
-                    <div class="options">
+                    <div class="options flex-column">
                         <p class="th-text">Premium</p>
                         <p class="option">30 web sites</p>
                         <p class="option">50 e-mails</p>
@@ -378,12 +413,23 @@
                 </div>
             </div>
         </div>
+        <form action="" class="order-form disactive" name="order">
+            <div class="close-btn">
+                <span></span>
+                <span></span>
+            </div>
+            <label for="">Firstname: <input type="text" name="firstname" required></label>
+            <label for="">Secondname: <input type="text" name="secondname" required></label>
+            <label for="">E-mail: <input type="e-mail" name="e-mail" required></label>
+            <label for="">Phone number: <input type="text" name="phone" required></label>
+            <label for=""><input type="submit" value='Order'></label>
+        </form>
     </div>
     <div class="sixth-block">
         <div class="container">
-            <div class="sixth-block-container">
+            <div class="sixth-block-container flex-row">
                 <div class="sixth-img-box"><img src="img/fourth.png" alt=""></div>
-                <section>
+                <section class="flex-column history-section">
                     <h2>our history</h2>
                     <article>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -410,7 +456,7 @@
                         containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
                         PageMaker including versions of Lorem Ipsum.
                     </article>
-                    <button>browse our story</button>
+                    <button class="button-first">browse our story</button>
                 </section>
             </div>
         </div>
@@ -418,36 +464,36 @@
     <div class="seventh-block">
         <div class="container">
             <h2>our business related projects</h2>
-            <div class="projects">
-                <div class="project">
+            <div class="projects flex-row">
+                <div class="project flex-column">
                     <div><img src="img/section/two_01.png" alt=""></div>
                     <p>technical aid</p>
                 </div>
-                <div class="project">
+                <div class="project flex-column">
                     <div><img src="img/section/two_02.png" alt=""></div>
                     <p>secure access</p>
                 </div>
-                <div class="project">
+                <div class="project flex-column">
                     <div><img src="img/section/two_03.png" alt=""></div>
                     <p>market reserch</p>
                 </div>
-                <div class="project">
+                <div class="project flex-column">
                     <div><img src="img/section/two_04.png" alt=""></div>
                     <p>credit</p>
                 </div>
-                <div class="project">
+                <div class="project flex-column">
                     <div><img src="img/section/one_01.png" alt=""></div>
                     <p>targeting</p>
                 </div>
-                <div class="project">
+                <div class="project flex-column">
                     <div><img src="img/section/one_02.png" alt=""></div>
                     <p>insurance</p>
                 </div>
-                <div class="project">
+                <div class="project flex-column">
                     <div><img src="img/section/one_03.png" alt=""></div>
                     <p>ecomerce</p>
                 </div>
-                <div class="project">
+                <div class="project flex-column">
                     <div><img src="img/section/one_04.png" alt=""></div>
                     <p>office</p>
                 </div>
@@ -456,32 +502,32 @@
     </div>
     <div class="eightth-block">
         <h2>out team members</h2>
-        <div class="team-section">
-            <div class="container">
+        <div class="team-section flex-row">
+            <div class="container flex-row eightth-block-members">
                 <div class="member">
-                    <div class="div"><img src="img/man1.png" alt=""></div>
-                    <p>SYED MIRAJ</p>
-                    <p>UI & UX DESIGNER</p>
+                    <div><img class="member-img" src="img/man1.png" alt=""></div>
+                    <p class="member-name">SYED MIRAJ</p>
+                    <p class="member-position">UI & UX DESIGNER</p>
                 </div>
                 <div class="member">
-                    <div class="div"><img src="img/man2.png" alt=""></div>
-                    <p>PENNY HUSTON</p>
-                    <p>DEVELOPER</p>
+                    <div><img class="member-img" src="img/man2.png" alt=""></div>
+                    <p class="member-name">PENNY HUSTON</p>
+                    <p class="member-position">DEVELOPER</p>
                 </div>
                 <div class="member">
-                    <div class="div"><img src="img/man3.png" alt=""></div>
-                    <p>LENNERD SHELLY</p>
-                    <p>REVIEWER</p>
+                    <div><img class="member-img" src="img/man3.png" alt=""></div>
+                    <p class="member-name">LENNERD SHELLY</p>
+                    <p class="member-position">REVIEWER</p>
                 </div>
                 <div class="member">
-                    <div class="div"><img src="img/man4.png" alt=""></div>
-                    <p>SHELDON CUPPER</p>
-                    <p>MARKETTER</p>
+                    <div><img class="member-img" src="img/man4.png" alt=""></div>
+                    <p class="member-name">SHELDON CUPPER</p>
+                    <p class="member-position">MARKETTER</p>
                 </div>
                 <div class="member">
-                    <div class="div"><img src="img/man5.png" alt=""></div>
-                    <p>ASHLEY COLE</p>
-                    <p>MANAGEMENT</p>
+                    <div><img class="member-img" src="img/man5.png" alt=""></div>
+                    <p class="member-name">ASHLEY COLE</p>
+                    <p class="member-position">MANAGEMENT</p>
                 </div>
             </div>
         </div>
@@ -489,8 +535,8 @@
     <div class="nineth-block">
         <div class="container">
             <h2>updates & support</h2>
-            <div class="nineth-block-section">
-                <section>
+            <div class="nineth-block-box flex-row">
+                <section class="nineth-block-section flex-column">
                     <article>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                         ut
@@ -509,27 +555,30 @@
                         tempora
                         incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                     </article>
-                    <button>support center</button>
+                    <button class="button-first">support center</button>
                 </section>
-                <div><img src="img/fifth.png" alt=""></div>
+                <div class="nineth-block-img"><img src="img/fifth.png" alt=""></div>
             </div>
         </div>
     </div>
     <div class="last-block">
         <div class="container">
-            <div><img src="img/sixth.png" alt=""></div>
-            <div class="last-block-text">
-                <h5>need creative workers?</h5>
-                <button>hire us</button>
+            <div class="last-block-img">
+                <!-- <img src="img/sixth.png" alt=""> -->
+                <div class="last-block-text flex-row">
+                    <h5>need creative workers?</h5>
+                    <button class="last-block-button">hire us</button>
+                </div>
             </div>
+
         </div>
     </div>
     <footer>
-        <div class="container">
-            <div class="footer-sertions">
-                <div class="footer-sertion">
+        <div class="container flex-column">
+            <div class="footer-sertions flex-row">
+                <div class="footer-sertion flex-column">
                     <h6>portfolio</h6>
-                    <ul>
+                    <ul class="footer-sertion-list">
                         <li><a href="#">Web Design</a></li>
                         <li><a href="#">Branding & Identity</a></li>
                         <li><a href="#">Mobile Design</a></li>
@@ -537,57 +586,59 @@
                         <li><a href="#">User Interface</a></li>
                     </ul>
                 </div>
-                <div class="footer-sertion">
+                <div class="footer-sertion flex-column">
                     <h6>about</h6>
-                    <ul>
+                    <ul class="footer-sertion-list">
                         <li><a href="#">The Company</a></li>
                         <li><a href="#">History</a></li>
                         <li><a href="#"> Vision</a></li>
                     </ul>
                 </div>
-                <div class="footer-sertion">
+                <div class="footer-sertion flex-column">
                     <h6>gallery</h6>
-                    <ul>
+                    <ul class="footer-sertion-list">
                         <li><a href="#">Flickr</a></li>
                         <li><a href="#"> Picasa</a></li>
                         <li><a href="#">iStockPhoto</a></li>
                         <li><a href="#"> PhotoDune</a></li>
                     </ul>
                 </div>
-                <div class="footer-sertion">
+                <div class="footer-sertion flex-column">
                     <h6>contact</h6>
-                    <ul>
+                    <ul class="footer-sertion-list">
                         <li><a href="#">Basic Info</a></li>
                         <li><a href="#">Map</a></li>
                         <li><a href="#">Conctact Form</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="social-links">
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9"
-                        height="15" viewBox="0 0 9 15">
+            <div class="social-links flex-row">
+                <a class="social-links-link" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="9" height="15" viewBox="0 0 9 15">
                         <image id="facebook.svg" width="9" height="15"
                             xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAPCAQAAACcwS2GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBRoRJhxhe+0rAAAAYElEQVQY062PQQ2AMAADLwQDWJgFLIAVLGABL0hAyyZhk3A8tj0IHx5cP03TNCnSdJjV7NyD3c4yUtkAOCmk3lK9qh9442Q0tp1oNGDwCSOFBAQAEgW+zf8Z9Y8rUKq9AbVqWS9LgJ9MAAAAAElFTkSuQmCC" />
                     </svg></a>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="14" height="12" viewBox="0 0 14 12">
+                <a class="social-links-link" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="12" viewBox="0 0 14 12">
                         <image id="twiter.svg" width="14" height="12"
                             xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAQAAAD4iURRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBRoRJjUjyXVHAAAAiklEQVQY022QUQ3DMAwFT9MIhEIohMIodBBCYRRGYRRKoRRSCB2EDsLtI0saaX3+sXz2k23EID2Ss8WnwSw4WTqO7jYtpguQ2MgATASaPqxH9+5s8VAUzIPVKATDKSwV4nQCc4Pxb3ar27frlgHtpgqv3IgkUj/hzZ31lxt9ddviY/gWLQnGsVzjC/Pm3B4L4sxRAAAAAElFTkSuQmCC" />
                     </svg></a>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="14" height="15" viewBox="0 0 14 15">
+                <a class="social-links-link" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="15" viewBox="0 0 14 15">
                         <image id="google.svg" width="14" height="15"
                             xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAQAAAB+HTb/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBRoRJwqMtGk7AAAAq0lEQVQY013QUXXDMAyF4Xt2RiAUTCEUQqEURiEUQqEUSsGFYAoehFD49uB0TSq9WP59r2RFRPGwG7HJKyNmu9mk4vZGA1b10NM/Ie0oG2f4leQ3c0pGPJMkJZIk4oaq+NFNYrKgmIbB4m5HEdGPueu7Q8N6nMvo/VJu2nh9GPcBJ1WzKGYNj/NXVkwX83/4nSXneF4qK+6HdtYt1w1toOuq+XN9Q1PO1yP/ANaL702vkkxYAAAAAElFTkSuQmCC" />
                     </svg></a>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="14" height="13" viewBox="0 0 14 13">
-                        <image id="ink.svg" width="14" height="13"
+                <a class="social-links-link" href="#" ><svg  xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="13" viewBox="0 0 14 13" >
+                        <image id="ink.svg" width="14" height="13" 
                             xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAQAAAAz1Zf0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBRoRJyBXD6DtAAAAdElEQVQY053PUQ3CQBCE4Y8GA2cBC2hAAhbOQi2AhbPSWsACFipheKA0IdfwwL/Zl51MZlakZkqNfqTkTenFAcu6PZGSuueLQ5jAxc0ZTXWyaJpYM2XKN9ehy1nczWDsnWO2D/acW/fBD/4Xj6zdeIAnn9sLqfluxJuhlHkAAAAASUVORK5CYII=" />
                     </svg></a>
             </div>
-            <p>Copyright © 2015 Syed Miraj.All rights reserved.</p>
+            <p class="footer-end">Copyright © 2015 Syed Miraj.All rights reserved.</p>
         </div>
     </footer>
+    <script src="javascript/js-one.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </body>
 
 </html>

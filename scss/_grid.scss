@@ -18,6 +18,7 @@ $white:#fdfcfc;
 
 body {
     font-size: 14px;
+    @include roboto;
 }
 
  
@@ -27,4 +28,21 @@ margin:0 auto;
 }
 header{
  @include flexRow;   
+}
+.flex-row{
+    @include flexRow;
+}
+.flex-column{
+    @include flexColumn;
+}
+.button-first{
+    @include open;
+    margin-top:1rem;
+    font-weight: bold;
+    color:$darkgrey;
+    background: $yellow;
+    border:none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding:15px 30px;
 }

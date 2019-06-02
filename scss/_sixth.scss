@@ -1,39 +1,26 @@
 // sixth-block and seventh-block style css
 
 .sixth-block-container {
+    //height: 100vh;
     width: 100%;
-    @include flexRow;
     justify-content: space-between;
-    height: 100vh;
+margin-bottom: 100px;
 
     section {
         h2 {
             width: 35%;
             margin: 0 0 1rem;
         }
-
-        @include flexColumn;
         width:48%;
         align-items: flex-start;
     }
     article{
-        @include roboto;
+        width:100%;
         color:#363636;
         line-height: 2rem;
         max-height: 10*2rem;
         overflow: hidden;
         text-overflow: ellipsis;
-    }
-    button{
-        @include open;
-        margin-top:1rem;
-        font-weight: bold;
-        color:$darkgrey;
-        background: $yellow;
-        border:none;
-        border-radius: 3px;
-        text-transform: uppercase;
-        padding:15px 30px;
     }
 }
 
@@ -47,13 +34,11 @@
 }
 
 .projects{
-    @include flexRow;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 .project{
-    @include flexColumn;
     justify-content: center;
     align-items: center;
     width: calc(100%/4);
@@ -62,7 +47,6 @@
         padding: 2rem 0;
     }
     p{
-        @include roboto;
         font-weight: bold;
         font-size: 1.1rem;
         text-transform: uppercase;
