@@ -181,6 +181,7 @@ h4 {
     z-index: 5;
     padding:4rem 0;
     label {
+        position: relative;
         width: 80%;
         display: flex;
         justify-content: space-between;
@@ -217,6 +218,7 @@ h4 {
     display: flex;
     align-items: center;
     cursor: pointer;
+    z-index:7;
     span{
         position :absolute;
         width: 100%;
@@ -234,4 +236,10 @@ h4 {
 }
 .disactive{
     display: none;
+}
+.form-error{
+    position: absolute;
+    color:red;
+    bottom:-25px;
+    right:0;
 }

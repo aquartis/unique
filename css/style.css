@@ -629,6 +629,7 @@ h4 {
 }
 
 .order-form label {
+  position: relative;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -678,6 +679,7 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  z-index: 7;
 }
 
 .close-btn span {
@@ -702,6 +704,13 @@ h4 {
 
 .disactive {
   display: none;
+}
+
+.form-error {
+  position: absolute;
+  color: red;
+  bottom: -25px;
+  right: 0;
 }
 
 .sixth-block-container {
@@ -1306,8 +1315,10 @@ h6 {
   }
   .order-form {
     height: 100vh;
+    width: 100%;
   }
   .order-form label {
+    font-size: 0.9rem;
     width: 90%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

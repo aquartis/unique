@@ -3,7 +3,8 @@
 ! function func() {
     const scrollBtn = document.querySelector('.scroll-up');
     const orderBtns = document.querySelectorAll('.options button');
-    const formClose=document.forms.order.querySelector('.close-btn');
+    const orderForm = document.forms.order;
+    const formClose = orderForm.querySelector('.close-btn');
 
 
 
@@ -86,6 +87,7 @@
         function pringCurrentSlide() {
             slideWraper.style.left = `-${sliders[currentImage % sliders.length].offsetLeft}px`;
             createPagination(currentImage % sliders.length);
+            console.log(currentImage);
         }
 
         function createPagination(num) {
@@ -106,7 +108,7 @@
         scrollBtn.onclick = () => {
             let height = window.scrollY;
             animate({
-                duration: 2000,
+                duration: 1000,
                 timing: (timeFraction) => {
                     return timeFraction;
                 },
@@ -145,19 +147,70 @@
 
     //show || close order menu
 
-      function showForm(){
-          let orderForm=document.forms.order;
-          orderForm.classList.toggle('disactive');    
-      }
-      function close(){
-this.parentElement.classList.toggle('disactive');
-      }
+    function showForm() {
+        let orderForm = document.forms.order;
+        orderForm.classList.toggle('disactive');
+    }
 
+    function close() {
+        if (this.parentElement.tagName == 'FORM') {
+            let errors = this.parentElement.querySelectorAll('.form-error');
+            if (errors !== undefined) {
+                errors.forEach((elem) => {
+                    elem.remove();
+                })
+            }
+            for (let el of this.parentElement.elements) {
+                if (el.name == 'submit') {
+                    el.value = el.value;
+                } else {
+                    el.value = '';
+                }
+            }
+        }
+        this.parentElement.classList.toggle('disactive');
+    }
+
+    function validateForm(e) {
+        e.preventDefault();
+        let inputs = this.elements;
+        for (let el of inputs) {
+            if (!checkText(el.name, el.value)) {
+                let span = document.createElement('span');
+                span.classList.add('form-error');
+                span.innerHTML = 'Incorrect text';
+                el.parentElement.appendChild(span);
+            }
+        }
+        let status = [...inputs].every((elem) => {
+           return checkText(elem.name, elem.value);
+         
+        })
+        if (status) {
+            alert('Thanks we call you soon.')
+            this.classList.toggle('disactive');
+        }
+    }
+
+    function checkText(name, string) {
+        switch (name) {
+            case 'firstname':
+            case 'secondname':
+                return /^[A-ZА-Я]?[a-zа-я]+$/g.test(string);
+            case 'e-mail':
+                return /^\w*[._-]?\w*[._-]?[._-]?\w*[._-]?@\w+\.\w{2,5}/g.test(string);
+            case 'phone':
+                return /^(:?\+3)?8?\s?\(?\d{3}\)?\s?\d{2}[\s-]?\d{2}[\s-]?\d{3}$/g.test(string);
+            case 'submit':
+                return true;
+        }
+    }
     for (let el of orderBtns) {
         el.addEventListener('click', () => {
             showForm();
         })
     }
+    orderForm.addEventListener('submit', validateForm)
     formClose.addEventListener('click', close)
     scrollUp();
     slider();
