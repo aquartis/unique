@@ -1088,8 +1088,8 @@ h6 {
     padding: 1rem;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    -webkit-animation: menu 1.5s linear;
-            animation: menu 1.5s linear;
+    -webkit-animation: menu 1s linear;
+            animation: menu 1s linear;
   }
   .navbar.active ul li {
     text-align: center;
