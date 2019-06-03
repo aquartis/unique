@@ -190,6 +190,7 @@
             alert('Thanks we call you soon.')
             this.classList.toggle('disactive');
         }
+        return false;
     }
 
     function checkText(name, string) {
